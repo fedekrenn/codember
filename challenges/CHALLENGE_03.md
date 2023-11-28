@@ -22,7 +22,8 @@ La segunda clave, zzzsg, no lo es; contiene 3 veces la letra z, pero necesita al
 Determina cuántas claves de cifrado son válidas según sus políticas.
 
 ** Cómo resolverlo **
+
 1. Analiza la lista de políticas y claves de cifrado que encontrarás en este archivo: https://codember.dev/data/encryption_policies.txt
 
 2. Crea un programa que devuelva la clave inválida número 42 (de todas las claves inválidas, la 42ª en orden de aparición). Por ejemplo:
-submit bqamidgewtbuz
+   submit bqamidgewtbuz

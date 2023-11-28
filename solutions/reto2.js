@@ -2,8 +2,8 @@ import { readFile } from 'fs/promises'
 
 const file = await readFile('./files/message_02.txt', 'utf8')
 
-function decodeText (message) {
-  const decoded = message.split('').reduce((acc, el) => {
+function decodeText (fileContent) {
+  const decoded = fileContent.split('').reduce((acc, el) => {
     if (el === '#') acc.result[acc.index]++
     if (el === '@') acc.result[acc.index]--
     if (el === '*') acc.result[acc.index] = acc.result[acc.index] * acc.result[acc.index]
