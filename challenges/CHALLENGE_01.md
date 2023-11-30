@@ -1,4 +1,5 @@
 ** El reto **
+
 Un espía está enviando mensajes encriptados.
 
 Tu misión es crear un programa que nos ayude a buscar patrones...
@@ -13,10 +14,13 @@ gato2perro3coche1sol1
 
 ¡Las palabras son ordenadas por su primera aparición en el mensaje!
 
+
 ** Más ejemplos: **
+
 llaveS casa CASA casa llaves -> llaves2casa3
 taza ta za taza -> taza2ta1za1
 casas casa casasas -> casas1casa1casas1
+
 
 ** Cómo resolverlo **
 

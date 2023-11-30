@@ -8,11 +8,13 @@ import countWords from '../solutions/reto1.js'
 import decodeText from '../solutions/reto2.js'
 import processFile from '../solutions/reto3.js'
 import getValidCode from '../solutions/reto4.js'
+import findHiddenMsg from '../solutions/reto5.js'
 // Files
 const file1 = await readFile('./files/message_01.txt', 'utf8')
 const file2 = await readFile('./files/message_02.txt', 'utf8')
-const file3 = await readFile('./files/message_03.txt', 'utf8')
+const file3 = await readFile('./files/encryption_policies.txt', 'utf8')
 const file4 = await readFile('./files/files_quarantine.txt', 'utf8')
+const file5 = await readFile('./files/database_attacked.txt', 'utf8')
 
 describe('Reto 1', () => {
   it('El programa debería devuelva el número de veces que aparece cada palabra', () => {
@@ -47,5 +49,17 @@ describe('Reto 3', () => {
 describe('Reto 4', () => {
   it('El programa debería devuelva el código válido en determinada posición', () => {
     assert.deepEqual(getValidCode(file4, 33), 'O2hrQ')
+  })
+})
+
+describe('Reto 5', () => {
+  it('El programa debería devuelva el mensaje oculto', () => {
+    assert.deepEqual(findHiddenMsg(file5), 'youh4v3beenpwnd')
+  })
+  it('El programa no debería devolver un string vacío', () => {
+    assert.notEqual(findHiddenMsg(file5), '')
+  })
+  it('El programa debería ser una función', () => {
+    assert.equal(typeof findHiddenMsg, 'function')
   })
 })

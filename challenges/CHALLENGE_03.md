@@ -1,4 +1,5 @@
 ** El Desafío del Cifrado Espía **
+
 Un grupo de espías ha descubierto que su sistema de cifrado de mensajes está comprometido.
 
 Han encontrado algunas contraseñas que no cumplen con laPolítica de Seguridad de Cifrado que tenían establecida cuando fueron creadas.
@@ -18,8 +19,10 @@ Sabiendo esto, en el ejemplo anterior, hay 2 claves válidas:
 
 La segunda clave, zzzsg, no lo es; contiene 3 veces la letra z, pero necesita al menos 4. Las primeras y terceras claves son válidas: contienen la cantidad adecuada de f y h, respectivamente, según sus políticas.
 
+
 ** Tu desafío: **
 Determina cuántas claves de cifrado son válidas según sus políticas.
+
 
 ** Cómo resolverlo **
 
