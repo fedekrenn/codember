@@ -1,7 +1,4 @@
-import { readFile } from 'fs/promises'
-const file = await readFile('./files/message_03.txt', 'utf8')
-
-function processFile (fileContent, index) {
+export default function processFile (fileContent, index) {
   const passwordData = fileContent.split('\r\n').map(line => {
     const [rule, password] = line.split(': ')
     const [range, letter] = rule.split(' ')
@@ -32,7 +29,5 @@ function processFile (fileContent, index) {
       ...item,
       index: index + 1
     }
-  }).filter(item => item.isValid === false)[index - 1]
+  }).filter(item => item.isValid === false)[index - 1].password
 }
-
-console.log(processFile(file, 42))

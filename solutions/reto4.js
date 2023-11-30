@@ -1,8 +1,4 @@
-import { readFile } from 'node:fs/promises'
-
-const file = await readFile('./files/files_quarantine.txt', 'utf8')
-
-function getValidCode (fileContent, index) {
+export default function getValidCode (fileContent, index) {
   const data = fileContent
     .split('\r\n')
     .map((file, index) => {
@@ -21,7 +17,5 @@ function getValidCode (fileContent, index) {
       }
     })
 
-  return data.filter(element => element.status === 'valid')[index - 1]
+  return data.filter(element => element.status === 'valid')[index - 1].unchecksum
 }
-
-console.log(getValidCode(file, 33))

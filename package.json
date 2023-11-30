@@ -5,12 +5,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "test": "mocha tests/challenges.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "4.3.10",
+    "mocha": "10.2.0",
     "standard": "17.1.0"
   },
   "eslintConfig": {
