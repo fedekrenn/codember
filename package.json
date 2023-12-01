@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
-    "test": "mocha tests/challenges.test.js"
+    "test1": "mocha tests/challenges2022.test.js",
+    "test2": "mocha tests/challenges2023.test.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,10 @@
     "standard": "17.1.0"
   },
   "eslintConfig": {
-    "extends": "standard"
+    "extends": "standard",
+    "rules": {
+      "no-prototype-builtins": "off"
+    }
   },
   "dependencies": {
     "zod": "3.22.4"

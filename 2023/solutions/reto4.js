@@ -5,13 +5,10 @@ export default function getValidCode (fileContent, index) {
       const [chain, unchecksum] = file.split('-')
       const checksum = chain
         .split('')
-        .filter((char, index, self) => {
-          return self.indexOf(char) === index && self.lastIndexOf(char) === index
-        })
+        .filter((char, _, self) => self.indexOf(char) === self.lastIndexOf(char))
         .join('')
 
       return {
-        position: index + 1,
         status: checksum === unchecksum ? 'valid' : 'invalid',
         unchecksum
       }

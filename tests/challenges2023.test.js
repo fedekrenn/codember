@@ -4,17 +4,17 @@ import { describe, it } from 'mocha'
 // FileSystem
 import { readFile } from 'fs/promises'
 // Functions
-import countWords from '../solutions/reto1.js'
-import decodeText from '../solutions/reto2.js'
-import processFile from '../solutions/reto3.js'
-import getValidCode from '../solutions/reto4.js'
-import findHiddenMsg from '../solutions/reto5.js'
+import countWords from '../2023/solutions/reto1.js'
+import decodeText from '../2023/solutions/reto2.js'
+import processFile from '../2023/solutions/reto3.js'
+import getValidCode from '../2023/solutions/reto4.js'
+import findHiddenMsg from '../2023/solutions/reto5.js'
 // Files
-const file1 = await readFile('./files/message_01.txt', 'utf8')
-const file2 = await readFile('./files/message_02.txt', 'utf8')
-const file3 = await readFile('./files/encryption_policies.txt', 'utf8')
-const file4 = await readFile('./files/files_quarantine.txt', 'utf8')
-const file5 = await readFile('./files/database_attacked.txt', 'utf8')
+const file1 = await readFile('./2023/files/message_01.txt', 'utf8')
+const file2 = await readFile('./2023/files/message_02.txt', 'utf8')
+const file3 = await readFile('./2023/files/encryption_policies.txt', 'utf8')
+const file4 = await readFile('./2023/files/files_quarantine.txt', 'utf8')
+const file5 = await readFile('./2023/files/database_attacked.txt', 'utf8')
 
 describe('Reto 1', () => {
   it('El programa debería devuelva el número de veces que aparece cada palabra', () => {

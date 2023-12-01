@@ -1,7 +1,4 @@
-import { readFile } from 'node:fs/promises'
 import { z } from 'zod'
-
-const file = await readFile('./files/database_attacked.txt', 'utf8')
 
 export default function findHiddenMsg (fileContent) {
   const usersArray = fileContent.split('\r\n')
@@ -39,5 +36,3 @@ export default function findHiddenMsg (fileContent) {
   const hiddenMsg = invalidUsers.map(user => user.username[0]).join('')
   return hiddenMsg
 }
-
-console.log(findHiddenMsg(file))
