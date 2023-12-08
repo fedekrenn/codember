@@ -13,5 +13,3 @@ export default function findPassword (minNumber, maxNumber, position) {
 
   return `${numbers.length}-${numbers[position]}`
 }
-
-console.log(findPassword(11098, 98123, 55))

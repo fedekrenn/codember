@@ -1,7 +1,3 @@
-import { readFile } from 'node:fs/promises'
-
-const file = await readFile('2022/files/colors.txt', 'utf-8')
-
 export default function countZebras (fileContent) {
   const colors = JSON.parse(fileContent)
 
@@ -23,5 +19,3 @@ export default function countZebras (fileContent) {
 
   return `${result.maxStripeCount}@${result.lastColor}`
 }
-
-console.log(countZebras(file))

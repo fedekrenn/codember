@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
+    "test": "echo please use test1 or test2",
     "test1": "mocha tests/challenges2022.test.js",
     "test2": "mocha tests/challenges2023.test.js"
   },

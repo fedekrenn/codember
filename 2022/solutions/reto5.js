@@ -1,7 +1,3 @@
-import { readFile } from 'node:fs/promises'
-
-const file = await readFile('2022/files/mecenas.json', 'utf-8')
-
 export default function findWinner (fileContent) {
   const parsedFile = JSON.parse(fileContent)
 
@@ -21,5 +17,3 @@ export default function findWinner (fileContent) {
 
   return result[0]
 }
-
-console.log(findWinner(file))
